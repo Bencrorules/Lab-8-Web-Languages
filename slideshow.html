@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>---Cat Slide Show!---</h1>
+        <img id="id" src="images/picture1.jpg" height ="300" width="400"><br>
+        <button type="button" onclick="previous()">Previous</button>
+        <button type="button" onclick="next()">Next</button>
+    </body>
+</html>
+
+<script>
+    var place = 0;
+    var NOP = 4; //Number Of Pictures - 1
+    var id = ["images/picture1.jpg","images/picture2.jpg","images/picture3.jpg","images/picture4.jpg","images/picture5.jpg"]
+
+    function previous() {
+        if(place==0) place=NOP;
+        else place--;
+
+        let image=document.getElementById('id')
+        image.src=id[place]
+    }
+
+    function next() {
+        if(place==NOP) place=0;
+        else place++;
+
+        let image=document.getElementById('id')
+        image.src=id[place]
+    }
+</script>

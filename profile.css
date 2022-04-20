@@ -1,0 +1,15 @@
+p{
+    color:purple;
+    font-family: arial;
+    font-size: 22pt;
+  }
+  body{
+    background-image: url(images/picture1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: auto;
+    width: auto;
+    background-size: 75%;
+  
+  }

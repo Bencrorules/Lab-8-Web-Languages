@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSSmanipulation.css" type="text/css"/>
+        <title>Color Changer</title>
+    </head>
+
+    <body>
+        <h1>---Color Changer---</h1>
+        <p id ="text">---Sample Text---</p>
+
+        Enter RGB Values from 0-255 <br>
+
+        <h1>Border:</h1>
+        Red Value:<input type="text" id="redBorder"><br>
+        Green Value:<input type="text" id="greenBorder"><br>
+        Blue Value:<input type="text" id="blueBorder"><br>
+        Width: <input type="text" id="border"><br>
+
+        <h1>Background:</h1>
+        Red Value:<input type="text" id="redBack"><br>
+        Green Value:<input type="text" id="greenBack"><br>
+        Blue Value:<input type="text" id="blueBack"><br><br>
+
+        <button type="button" onclick="colorUpdater()">Apply Changes</button>
+    </body>
+</html>
+
+<script>
+    function colorUpdater(){
+        var redBorder=document.getElementById("redBorder").value;
+        var blueBorder=document.getElementById("blueBorder").value;
+        var greenBorder=document.getElementById("greenBorder").value;
+        var redBack=document.getElementById("redBack").value;
+        var blueBack=document.getElementById("blueBack").value;
+        var greenBack=document.getElementById("greenBack").value;
+        var border=document.getElementById("border").value;
+
+        if(redBorder<0||greenBorder<0||blueBorder<0||redBorder>255||greenBorder>255||blueBorder>255) alert("Please enter RGB values from 0-255");
+        else if(redBack<0||greenBack<0||blueBack<0||redBack>255||greenBack>255||blueBack>255) alert("Please enter RGB values from 0-255");
+        else if(border<0) alert("Invalid border width");
+
+        text.style.borderColor='rgb('+greenBorder+','+blueBorder+','+redBorder+')';
+        text.style.backgroundColor='rgb('+redBack+','+greenBack+','+blueBack+')';
+        text.style.borderWidth= border;
+    }
+</script>
